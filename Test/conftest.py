@@ -10,3 +10,5 @@ def setup(request):
     driver.maximize_window()
     driver.delete_all_cookies()
     request.cls.driver = driver
+    yield
+    driver.close()
